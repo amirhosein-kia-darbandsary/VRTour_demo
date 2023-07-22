@@ -1,0 +1,19 @@
+name: "Test-Action"
+
+on:
+  pull_request:
+    types: 
+      - "closed"
+    branches: 
+      - "master"  
+  
+jobs:
+  test_job:
+    runs-on: ubunto-latest
+    steps:
+        - name: "Copyt the files"
+          uses: actions/checkout@v3.5.3
+        - name: "Run the tests"
+          run: echo "running test"
+          
+    
